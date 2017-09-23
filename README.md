@@ -5,9 +5,9 @@ These are tools designed for working with modern linux system calls including, m
 
 We designed these primarily to work in high performance environments to determine information about the running kernel, improve system performance, and debug performance problems.
 
-= fincore =
+## fincore
 
-{{{
+```
 fincore [options] files...
 
   --pages=false      Do not print pages
@@ -35,11 +35,11 @@ stats for PERMALINK_CONTENT_2010_06_04.MYI: file size=659397632 , total pages=16
 stats for PERMALINK_CONTENT_2010_06_04.frm: file size=10156 , total pages=2 , cached pages=3 , cached size=12288, cached perc=150.000000 
 ---
 total cached size: 32847278080
-}}}
+```
 
-= fadvise =
+## fadvise
 
-{{{
+```
 
 SYNTAX: filename mode [offset] [,length]
 Where mode can be:
@@ -85,11 +85,11 @@ without an underlying file.
 FADV_NOREUSE
 
 Access data only once.
-}}}
+```
 
-= fallocate =
+## fallocate
 
-{{{
+```
 SYNTAX: fallocate file length
 
 fallocate() allows the caller to directly manipulate the allocated disk space
@@ -117,4 +117,4 @@ implementing that function.
 
 Because allocation is done in block size chunks, fallocate() may allocate a
 larger range than that which was specified.
-}}}
+```
